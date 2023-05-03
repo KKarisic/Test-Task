@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="sr"> <!--na kom je jeziku stranica-->
+
+    <head>
+        <meta charset="utf-8"> <!--obavezno prvo u headu kako bi nam sajt sve citao -->
+        <meta name="viewport" content="width=device-width"> <!--pozivanje media upita za responsive -->
+        <link href="style.css" rel="stylesheet"> <!--povezivanje HTML-a i CSS-a -->
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"><!--ubacivanje fonta -->
+        <link href="fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet"> <!--pozivanje fontawsome ikonica -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   <!--jquery-za prepoznavanje pluginova -->
+
+        <title>Test task</title>
+    </head>
+
+    
+    <body>
+     <!-- slika sa logom, pozadinskom slikom i navigacijom -->
+    	<header id="header">
+		    <div class="wrapper"> <!-- da nam site bude full width -->
+            
+                <div id="logoAndNav">
+                    <div id="logo">  <!-- Logo --> 
+				        <img src="Pictures/18250_visit-maldives-logo-fotor-bg-remover-2023050217188.png" alt="Maldives"> 
+			        </div>  <!-- end #logo --> 
+            
+                    <nav id="nav"> 
+		              <ul id="menu">
+                        <li><a href="#" id="galery" class="bttn_nav">Galery</a> 
+                            <ul>
+                                <li><a href="#" class="bttn_nav">Days</a></li>
+                                <li><a href="#" class="bttn_nav">Nights</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="offers" class="bttn_nav">Offers</a>
+                            <ul>
+                                <li><a href="#" class="bttn_nav">Hotels</a></li>
+                                <li><a href="#" class="bttn_nav">Bungalows</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="bttn_nav">Comments</a> </li>
+                       </ul> <!-- end ul --> 
+        
+                       <a href="#" id="resp-menu"><i class="fas fa-bars"></i> Meni</a>  <!-- meni za mobile -->
+	                </nav> <!-- nav --> 
+                </div> <!-- end #logoAndNav-->
+                
+                
+             
+    
+   
+                
+                <div id="hero"> <!-- deo gde je paragraf, dugme i video -->
+                    <div id="text">
+	                   <h1>Visit us and you will see <br> a difference</h1> 
+                       <p>Nothing screams "paradise" quite like the Maldives, a 26-atoll chain of islands with powdery beaches, turquoise waters, and dreamy overwater bungalow resorts.
+                       </p>
+                
+                       <div id="buttons">
+                            <div id="dugmeBttn"><a href="#">More &raquo;</a> </div>
+                            <div id="videoBttn" class="container_video">
+                                <div class="icon">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg> 
+                                </div> <!-- end .icon -->
+  	                        <p>Video</p> 
+                            </div> <!-- end .container_video -->
+   	                   </div> <!-- end #buttons -->
+                    </div> <!-- end #text -->
+
+                    <div class="youtube-player-overlay">
+   	                <div class="youtube-player-popup">
+   		                <iframe src="https://www.youtube.com/embed/hCQvPX0DLFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   </div> <!-- end .youtube-player-overlay-->
+                   </div> <!-- end .youtube-player-popup -->
+                </div> <!-- end #hero -->  
+		    </div> <!-- end .wrapper --> 
+        </header> <!-- end header --> 
+    
+        
+        
+        <div id="preMain">
+            <div class="wrapper">
+                <h2>Maldives</h2>
+            
+                <div class="preMainAllParts">  
+                    <div id="preMainPic1" class="preMainParts">
+                        <h3>Demographics</h3>
+                        <p>The largest ethnic group is Dhivehin, i.e. the Maldivians, native to the historic region of the Maldive Islands comprising today's Republic of Maldives and the island of Minicoy in Union territory of Lakshadweep, India. </p>
+                        <a href="#">More &raquo;</a>
+                    </div> <!-- end #PreMainParts -->
+        
+                    <div id="preMainPic2" class="preMainParts">
+                        <h3>Fishing</h3>
+                        <p>For many centuries the Maldivian economy was entirely dependent on fishing and other marine products. Fishing remains the main occupation of the people and the government gives priority to the fisheries sector.</p>
+                        <a href="#">More &raquo;</a>
+                    </div> <!-- end #PreMainParts -->
+        
+                    <div id="preMainPic3" class="preMainParts">
+                        <h3>Tourism</h3>
+                        <p>The Maldives remained largely unknown to tourists until the early 1970s. Only 189 islands are home to its 447,137 inhabitants. The other islands are used entirely for economic purposes, of which tourism and agriculture are dominant.</p>
+                        <a href="#">More &raquo;</a>
+                    </div> <!-- end #preMainParts -->
+                 </div>   <!--end .preMainAllParts -->  
+            </div>  <!--end .wrapper -->
+        </div> <!--end #preMain -->
+        
+        <main>
+            <div class="wrapper">
+                <div id="main">
+                    <div id="mainOne">
+                        <div id="image-front">
+                           
+                       </div> <!-- end image front -->
+                    </div>
+                    <div id="mainTwo">
+                         <h2>Impressing our <br> <b>Visitors.</b></h2>
+                         <p>The Maldives is an archipelagic state in South Asia, situated in the Indian Ocean. It lies southwest of Sri Lanka and India, about 750 kilometres from the Asian continent's mainland.</p>
+                    </div>
+                    <div id="mainThree">
+                        <h5><i class="fas fa-lg fa-gear"></i>Geography</h5>
+                        <p>The Maldives consists of 1,192 coral islands grouped in a double chain of 26 atolls, that stretch along a length of 871 kilometres north to south, 130 kilometres east to west, spread over roughly 90,000 square kilometres, of which only 298 km2 is dry land, making this one of the world's most dispersed countries.</p>
+                    </div>
+                    <div id="mainFour">
+                        <h5><i class="fas fa-lg fa-gear"></i>Climate</h5>
+                        <p>The Maldives has a tropical monsoon climate (Am) under the Köppen climate classification. Because the Maldives has the lowest elevation of any country in the world, the temperature is constantly hot and often humid.</p>
+                    </div>
+                 </div> <!-- end #main> -->
+            </div> <!-- end .wrapper> -->
+        </main> <!-- end main> -->
+    
+        
+        <section id="news">
+            <div class="wrapper">
+                 <h2>News and trends</h2>
+             
+                 <div id="allNews">   
+                    <div id="myButtonFirst">
+                    <article id="newsOne" class="newsList">
+                        <div id="allNewsPic1" class="allNewsPics"> </div>
+                  
+                        <h5>A Few Mistakes to Avoid in the Maldives</h5>
+                          
+                        <a href="#"><div class="category">Category: Day</div> </a>
+                    </article>  <!-- end #newsOne i .newsList -->
+                    </div> <!-- end #myButtonFirst -->
+                
+                    <div id="myPopupFirst" class="popup">
+                    <div class="popup-content">
+                
+                             <div id="popUpImg1" class="popUpImg">
+                                </div> <!-- end #popUpImg1 -->
+                            
+                            <h5>A Few Mistakes to Avoid in the Maldives</h5>
+                        
+                            <ul>
+                                <li>Visiting Only One Island</li> 
+                                <p>The first thing to know about the Maldives is that most resorts are situated on their own private island — in fact, one island, one resort is the typical approach for hotels within the archipelago.</p>
+                                
+                                <li>Assuming the Maldives Can’t Be Budget-friendly</li> 
+                                <p>The Maldives has a reputation for being an exclusive, ultra-lavish destination. But it's actually quite possible to visit the Maldives on a budget — even the airfare isn't prohibitively expensive, if you scout out connecting flights through Europe or Asia.</p>
+                                
+                                <li>Not Going Until Your Honeymoon</li> 
+                                <p>Thanks to its dreamy overwater bungalows and romantic sunsets, the Maldives will always rank as a top honeymoon destination. But this isn't a place you need to save for your honeymoon or a romantic getaway with a partner. The Maldives is just as well-suited for a girls' trip or family escape.</p>
+                        </ul>
+                         
+                             <button id="closePopupFirst">Close</button>
+                    </div>  <!-- end popup content -->   
+                   </div>     <!-- end my #popupFirst andi .popup -->
+                     
+                    <div id="myButtonSecond">
+                    <article id="newsTwo" class="newsList">
+                        <div id="allNewsPic2" class="allNewsPics"> </div>
+                  
+                        <h5>Bioluminescent Plankton in The Maldives - Guide</h5>
+                          
+                        <a href="#"> <div class="category">Category: Magic</div> </a>
+                    </article>  <!-- end #newsTwo i .newsList -->
+                    </div> <!-- end #myButtonSecond -->
+                
+                    <div id="myPopupSecond" class="popup">
+                    <div class="popup-content">
+                
+                             <div id="popUpImg2" class="popUpImg">
+                                </div> <!-- end #popUpImg1 -->
+                            
+                            <h5>Bioluminescent Plankton in The Maldives - Guide</h5>
+                            
+                            <p>Bioluminescent plankton can appear any time of the year in The Maldives, but it is said that from June to December, there are greater volumes of plankton in the seas of The Maldives - making it the best time to visit The Maldives for high possibilities of seeing bioluminescence, when the phytoplankton glows brightly in the ocean after the sun has set and the skies get darker. </p>
+                        
+                            <p>For a high chance of spotting bioluminescence, you should visit five days after the full moon from mid-May when the skies are dark during the warm summer months and the glowing effect becomes more pronounced. During the months between July to December, there is very little moonlight and the bioluminescent waves look even brighter creating a magical effect. This is also the ‘low season’, with less  tourists and cheaper prices - so its a great time to visit. </p>
+                         
+            
+                            <button id="closePopupSecond">Close</button>
+                    </div>  <!-- end popup content -->   
+                   </div>     <!-- end my #popupSecond andi .popup -->
+                
+                    <div id="myButtonThird">
+                    <article id="newsThree" class="newsList">
+                        <div id="allNewsPic3" class="allNewsPics"> </div>
+                  
+                        <h5>Things to do toghether in Maldives at Night</h5>
+                          
+                        <a href="#"><div class="category">Category: Night</div> </a>
+                    </article>  <!-- end #newsThree i .newsList -->
+                    </div> <!-- end #myButtonThird -->
+                
+                    <div id="myPopupThird" class="popup">
+                     <div class="popup-content">
+                
+                             <div id="popUpImg3" class="popUpImg">
+                                </div> <!-- end #popUpImg1 -->
+                            
+                            <h5>Things to do toghether in Maldives at Night</h5>
+                            
+                            <p>From bioluminescent beaches to night diving, the Maldives' offerings are sometimes best seen at night. Explore some of our favorite evening activities in Maldives below.</p>
+                         
+                             <ul>
+                                <li>Help to Release Baby Sea Turtles</li> 
+                                <p>The Maldives are home to five of the world's seven sea turtle species. Sea turtles lay their eggs all year round; however, the most active nesting season falls from May to June. The greatest number of hatching takes place from July to August.</p>
+
+                                <p>Hatchlings usually wait until night to emerge from the nest. Emerging at night reduces exposure to daytime predators. Turtles normally hatch during the full moon, but some of the hatchlings do come out on darker nights.You can help the baby turtles in their struggle for survival by helping them go in the right direction.</p>
+                                
+                                <li>Stargazing</li> 
+                                <p>Anantara Kihavah's overwater observatory and SKY bar allows guests to drink in the atmosphere under a starry night sky as the night unfolds, while experiencing a stargazing session with the SKY Guru through Maldives’ most powerful overwater observatory. </p>
+                                
+                                <li>Night Diving</li> 
+                                <p>What's a better fishing experience? You get to test your fishing skills, thrill your taste buds and savor the Maldives' delicacies. Enjoy the sunset while fishing the local way, reel them in with your hand line and bait. Just drop your baited lines and wait for the fish to start biting!</p>
+                                
+                                <li>Night Fishing</li> 
+                                <p>What's a better fishing experience? You get to test your fishing skills, thrill your taste buds and savor the Maldives' delicacies. Enjoy the sunset while fishing the local way, reel them in with your hand line and bait. Just drop your baited lines and wait for the fish to start biting!</p>
+                        </ul>
+                         
+            
+                            <button id="closePopupThird">Close</button>
+                    </div>  <!-- end popup content -->   
+                   </div>     <!-- end my #popupThird andi .popup -->  
+                   
+                </div>  <!-- end #allNews -->
+              </div> <!-- end wrapper -->
+            </section> <!-- end #news -->
+    
+       
+            <form action="action_page.php"> <!-- pokazuje gde se salju podaci-->
+                <div class="wrapper">
+                    <div id="newsletter">   
+                         <div id="newsletterLeft" class="container">
+                                <h2>Subscribe to our <br> Newsletter</h2>
+                                <p>We love being in touch.</p>      
+                         </div> <!-- end #newsletterLeft and .container -->
+
+                        <div id="newsletterRight" class="container">
+                            <div id="email" class="container">  <!-- deo da se unese mejl i stiklira daily-->
+                                <input type="email" placeholder="Email address" name="mail" required>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                                </label>
+                            </div> <!-- end #email and .container  -->
+
+                              <div id="button" class="container"> <!-- dugme submit -->
+                                     <input type="submit" value="Subscribe">
+                               </div> <!-- end #button and .container -->
+                        </div> <!-- end #newsletterRight and .container -->
+                    </div> <!-- end newletter -->
+                </div> <!-- end wrapper -->
+            </form> <!-- end forme -->
+    
+    
+    
+           <footer>
+               <div class="wrapper">
+                   <div id="footer">
+                        <div id="footerOne" class="footerParts">
+                           <h3>Contact us.</h3>
+                           <h2>Let's Talk. </h2>
+                            
+                            <div id="socialicons1"> <!--ikonice za drustvene mreze bez naziva -->
+                                <a href="https://www.facebook.com/" class="bttn_social" target="_blank"><i class="fab fa-lg fa-facebook-square"></i></a>   
+                                <a href="https://www.instagram.com/accounts/login/?hl=sr" class="bttn_social" target="_blank"><i class="fab fa-lg fa-instagram-square"></i></a>
+                                <a href="https://twitter.com/login?lang=sr" class="bttn_social" target="_blank" ><i class="fab fa-lg fa-twitter-square"></i></a> <!--fa-lg nam oznacava da ce ikonice biti vece,na sajtu ima vise size opcija-->
+				            </div>  <!-- end #socialicons1 -->  
+                        </div> <!-- #footerOne and .footerParts -->
+       
+                        <div id="footerTwo" class="footerParts">
+                            <h5>About Us</h5>             
+                                <p><a href="#" >Travel Agency </a></p>
+                                <p><a href="#" >Travel Policy </a></p>             
+                        </div>  <!-- #footerTwo and .footerParts -->
+               
+                        <div id="footerThree" class="footerParts">
+                            <h5>Where we are</h5>
+
+                            <div id="map">
+                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8159199.935270241!2d67.94055186844041!3d3.0988200561457426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x24b599bfaafb7bbd%3A0x414509e181956289!2sMaldives!5e0!3m2!1sen!2srs!4v1683056885679!5m2!1sen!2srs"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                             </div> <!-- end map -->
+                        </div> <!-- #footerThree and .footerParts -->
+               
+                        <div id="footerFour" class="footerParts">
+                                <h5>Our contact info</h5>
+                                <p><i class="fas fa-lg fa-phone"></i> <b><i> Phone number: </i></b>+381 61 361 6722</p>
+                                <p><i class="fas fa-lg fa-envelope"></i> <b><i> Email: </i></b>maldives@gmail.com</p>
+                                <p><p><i class="fas fa-lg fa-map-marker-alt"></i> <b><i> Address: </i></b>Indian Ocean</p></p>
+                         </div> <!-- #footerFour and .footerParts -->
+                </div> <!-- end # footer --> 
+            </div>  <!-- end .wrapper -->
+         </footer> <!-- end footer -->
+    
+    
+    
+    
+     <!-- js za video pop up -->
+   <script>
+	   const YTPlayerOverlay = document.querySelector(".youtube-player-overlay");
+        const YTLinks = document.querySelectorAll(".container_video");
+
+        YTLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                YTPlayerOverlay.classList.add("active");
+            });
+        });
+
+        YTPlayerOverlay.addEventListener("click", () => {
+            YTPlayerOverlay.classList.remove("active");
+        })
+	</script> 
+    
+      <!-- js za details page pop up First -->
+    <script>
+        myButtonFirst.addEventListener("click", function () {
+            myPopupFirst.classList.add("show");
+        });
+        closePopupFirst.addEventListener("click", function () {
+            myPopupFirst.classList.remove("show");
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopupFirst) {
+                myPopupFirst.classList.remove("show");
+            }
+        });
+    </script>
+    
+     <!-- js za details page pop up Second -->
+    <script>
+        myButtonSecond.addEventListener("click", function () {
+            myPopupSecond.classList.add("show");
+        });
+        closePopupSecond.addEventListener("click", function () {
+            myPopupSecond.classList.remove("show");
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopupSecond) {
+                myPopupSecond.classList.remove("show");
+            }
+        });
+    </script>
+    
+     <!-- js za details page pop up Third -->
+    <script>
+        myButtonThird.addEventListener("click", function () {
+            myPopupThird.classList.add("show");
+        });
+        closePopupThird.addEventListener("click", function () {
+            myPopupThird.classList.remove("show");
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopupThird) {
+                myPopupThird.classList.remove("show");
+            }
+        });
+    </script>
+    
+ 
+     <script> //js za resp menu
+		var menu = document.querySelector("#menu");
+        var dugme = document.querySelector("#resp-menu");
+
+		dugme.onclick = function() { toggle_menu() }
+		
+		function toggle_menu() {
+			menu.classList.toggle("open");
+        
+		}
+	</script>  
+    
+    </body>
+    
+</html>

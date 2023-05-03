@@ -1,0 +1,830 @@
+/* CSS Document */ 
+*
+body{
+	margin:0;
+	padding:0;
+	font-family: 'PT Sans', sans-serif;
+	font-size:16px;
+	color:rgba(0,0,0,0.8);
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Caveat', cursive;
+	text-transfrom:uppercase; 
+	font-weight:700;
+	color:#000;
+}
+p{
+    font-family: 'Caveat', cursive;
+}
+h1 {font-size:38px;}
+h2 {font-size:32px;}
+h3 {font-size:28px;}
+h4 {font-size:24px;}
+h5 {font-size:20px;}
+h6 {font-size:18px;}
+p  {font-size:16px;}
+
+a{
+	display:inline-block;/*zadrzava inline ali moze da prihvati box model */
+	text-decoration:none;/*skida linije ispod linka */	
+	text-align:center;/*centrira tekst u okviru linkova*/
+}
+a#resp-menu{ /*meni za mobile */
+    display:none; 
+} 
+img{  
+	vertical-align:bottom;	
+} 
+ul{
+	list-style:none; /*skida bullete*/
+}
+.wrapper{ /*wrapper je unutar headera i drugih kako bismo dobili sajt full-width */
+	width: 1140px;
+    margin: 0 auto;	/*centriramo ga	*/
+}
+/*DUGMICI KOJE IMA SAMO NAVGACIJA*/
+a.bttn_nav{ 
+	display:block;
+	font-weight:700;/*da bude boldovano*/
+	line-height:20px;
+	padding:20px;
+	height:20px;
+    width: 80px;
+    text-transform: uppercase;
+	margin:0 0px 0 0px;
+	transition:600ms 0s background linear;
+}
+a.bttn_nav:link, 
+a.bttn_nav:visited{
+	color:rgba(255,255,255,1.00);
+}
+a.bttn_nav:hover{
+	background:rgba(17,128,44,0.30);
+    color:rgba(0,0,0,1.00);
+}
+a.bttn_nav:active{
+	background:rgba(92,153,73,1.00);
+	color:rgba(0,0,0,1.00);
+}
+#header{
+	background-image: url("Pictures/headerPic.jpg");
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	padding:0 0 20px 0;
+	color:#000000;
+}
+/*Odavde na dole je za najveci ekran */
+#logoAndNav #logo{
+    float:left; 
+}
+#logoAndNav #nav{
+    float:right;  
+}
+#logoAndNav #logo img{ 
+	width: 250px;
+	height:120px;
+}
+ #nav ul{
+	display:flex; /*rasporedjuje lijeve u red*/
+	justify-content:space-between;
+	margin:0;
+	padding:0;
+} 
+#nav ul li{
+    position:relative;  
+}
+#nav ul li:hover ul{
+    display:block;
+}  
+
+#nav ul li:hover > li{
+    display:block;
+}
+#nav ul li ul{ /*padajuci meni */
+    display:none;
+    position:absolute;
+    left:0;
+    top:60px;
+    width:120px;
+	line-height:30px;
+}
+#hero{
+    clear:both;
+    margin:20px 0;
+    padding: 20px 0 0 0;
+}
+#hero #text{
+    width:50%;
+}
+#hero #text #buttons{
+    display:flex;
+    justify-content: flex-start;
+}
+#text a{ /*pravimo dugme od linka */
+    font-weight:700;/*da bude boldovano*/
+	line-height:5px;
+	padding:20px;
+	height:5px;
+    width:100px;
+	margin:0 0px;/*razdvaja polja unutar navigacije */
+	transition:600ms 0s all linear;
+}
+#text a:link, 
+#text a:visited{
+	color:rgba(255,255,255,1.00);
+    background:rgba(17,128,44,0.40);
+}
+#text a:hover{
+	color:rgba(0,0,0,1.00);
+    background:rgba(17,128,44,0.00);
+    border:rgba(138,131,162,0.80) 1px solid;
+}
+#text a:active{
+	color:rgba(0,0,0,1.00);
+    border:rgba(138,131,162,0.80) 2px solid;
+}
+#text h1 {
+    color: rgba(17,128,44,1.00);
+    animation:5s infinite promena;
+}
+@keyframes promena{
+    0% {transform:scale(1);}
+    50% {transform:scale(1.1);}
+    100% {transform:scale(1);}
+}
+.container_video{  /*za video dugme */
+	display: flex;
+	flex-shrink: 0;
+	cursor: pointer;
+    font-weight:700;/*da bude boldovano*/
+    line-height:15px; 
+	height:45px;
+    width:130px;
+	margin:0 10px;/*razdvaja polja unutar navigacije */
+   transition:600ms 0s background linear;
+}
+.container_video:hover {
+    background:rgba(138,131,162,0.80);
+}
+ .container_video .icon {
+	width: 13px;
+	display: flex;
+    margin: 0 8px;
+    text-align: center;
+}  
+.youtube-player-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 400ms ease;
+}
+.youtube-player-overlay.active {
+	opacity:1;
+	pointer-events:auto;
+}
+.youtube-player-popup {
+	position: fixed;
+	width: 80%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	transition: all 400ms ease;
+}
+.youtube-player-overlay.active .youtube-player-popup {
+	transform: translate(-50%, 0);
+}
+.youtube-player-popup iframe{
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+#preMain .wrapper h2{ 
+    text-align: center;  
+}
+#preMain .wrapper .preMainAllParts{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	grid-template-rows:auto;
+	grid-gap:8px 8px;
+	grid-template-areas:
+		"preMainPic1 preMainPic2 preMainPic3";
+}
+#preMainPic1{
+    grid-area:preMainPic1;
+    border-radius: 4px;
+	background-image: url("Pictures/Demographics.jpg");
+}
+#preMainPic2{
+    grid-area:preMainPic2;
+    border-radius: 4px;
+	background-image: url("Pictures/Fishing.jpg");
+}
+#preMainPic3{
+    grid-area:preMainPic3;
+    border-radius: 4px;
+	background-image: url("Pictures/Tourism.jpg");
+}
+.preMainParts{
+    background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+    margin:0 0;
+    padding:10px 20px;
+}
+#preMain .wrapper .preMainParts p,
+#preMain .wrapper .preMainParts h3{
+    color:rgba(255,255,255,1.00);
+}
+#preMain .wrapper .preMainParts a{/*dugmici u okviru premain dela */
+	font-weight:700;/*da bude boldovano*/
+	line-height:20px;
+	padding:20px;
+	height:20px;
+	transition:600ms 0s all linear;
+}
+#preMain .wrapper .preMainParts a:link, 
+#preMain .wrapper .preMainParts a:visited{
+    color:rgba(255,255,255,1.00);
+    background:rgba(17,128,44,0.00);
+    border:rgba(138,131,162,0.80) 1px solid;	
+}
+#preMain .wrapper .preMainParts a:hover{
+	color:rgba(255,255,255,1.00);
+    background:rgba(17,128,44,0.2);
+}
+#preMain .wrapper .preMainParts a:active{
+	color:rgba(255,255,255,1.00);
+    background:rgba(17,128,44,0.2);
+}
+.wrapper #main{ 
+    padding: 50px 0 0 0;
+	display:grid;
+	grid-template-columns:3fr 2fr;/*da odnos bude jednak*/
+	grid-template-rows:repeat(3, auto);
+	grid-gap:8px 8px;/*razmak izmedju rows pa onda razmak izmedju columns*/
+	grid-template-areas:
+		"mainOne mainTwo"
+		"mainOne mainThree"
+		"mainOne mainFour";
+}
+.wrapper #mainOne{
+	grid-area:mainOne;
+    padding:0 20px 0 20px; 
+    border-radius: 4px;
+    background-image: url("Pictures/main.jpg");/*stavljena pozadinska slika */
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;    
+}
+ .wrapper #mainTwo{
+	grid-area:mainTwo;
+    background-color:rgba(71, 206, 255, 0.2);
+    padding:0 0;
+    border-radius: 4px;
+}
+.wrapper #mainThree{
+	grid-area:mainThree;
+    background-color:rgba(212,212,212,0.2);
+    padding:10px 20px;
+    border:rgba(127,127,127,0.6) 1px solid;
+    border-radius: 4px;
+}
+.wrapper #mainFour{
+    grid-area:mainFour;
+    background-color: rgba(212,212,212,1.00);
+	padding:10px 20px;
+    border-radius: 4px;
+}
+#mainThree h2{
+    margin-top:0;
+}
+#mainThree p{
+    padding:0 55px;
+}
+#mainFour h2{
+    margin-top:0;
+}
+#mainFour p{
+    padding:0 55px;
+}
+#image-front{ /*samo pomerena ka dole slika iz htmla */
+    margin-top:50px;   
+}
+
+/*news */
+
+#news .wrapper h2{
+    text-align: center;
+}
+#news .wrapper  #allNews{
+	display:grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-template-rows:auto;
+	grid-gap:8px 8px;
+	grid-template-areas:
+		"newsOne newsTwo newsThree";
+}
+#newsOne{
+    grid-area:newsOne;
+}
+#newsTwo{
+    grid-area:newsTwo;
+}
+#newsThree{
+    grid-area:newsThree;
+}
+#news .wrapper  #allNews .newsList h5{
+    padding:10px 20px;
+}
+#news .wrapper  #allNews .newsList a{
+	font-weight:700;/*da bude boldovano*/
+	line-height:15px;
+	padding:20px;
+	height:20px;
+    border:rgba(138,131,162,0.80) 1px solid;
+	margin:0 0px 20px 20px;
+	transition:600ms 0s background linear; 
+}
+#news .wrapper  #allNews .newsList a:link, 
+#news .wrapper  #allNews .newsList a:visited{
+	color:rgba(0,0,0,0.8);
+}
+#news .wrapper  #allNews .newsList a:hover{
+	background:rgba(138,131,162,0.40);
+    color:rgba(0,0,0,0.8);
+}
+#news .wrapper  #allNews .newsList a:active{
+	background:rgba(138,131,162,0.40);
+	color:rgba(0,0,0,0.8);
+}
+.allNewsPics{
+    background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;   
+    width:100%;
+    height:580px;
+}
+ #allNewsPic1{
+    background-image: url("Pictures/Mistakes.jpg");
+}
+#allNewsPic2{
+    background-image: url("Pictures/Watershines.jpg");
+}
+#allNewsPic3{
+    background-image: url("Pictures/things-to-do-in-maldives-at-night.jpg");
+}
+.newsList{
+    background-color: rgba(212,212,212,1.00);
+    border-radius: 4px;
+    border:rgba(127,127,127,0.6) 1px solid;
+}
+
+/*ovo dole je za pop up sadrzaj */
+
+
+.popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.popup-content {
+    background-color:rgba(212,212,212,1);
+    margin: 10% auto; /*spusta pop up od vrha ekrana i centrira ga */
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 60%;
+    font-weight: bolder;
+}
+.popup-content button {
+    display: block;
+    margin: 0 auto;
+}
+.show {
+    display: block;
+}
+.popup-content .popUpImg{
+    background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+    width:100%;
+    height:550px;
+}
+.popup-content #popUpImg1{
+    background-image: url("Mistakes.jpg");
+}
+.popup-content #popUpImg2{
+    background-image: url("Watershines.jpg");
+}
+.popup-content #popUpImg3{
+    background-image: url("things-to-do-in-maldives-at-night.jpg");
+}
+
+form { 
+    background-color:rgba(212,212,212,0.2);
+}
+#newsletter{
+    display:flex;
+    justify-content: space-between; 
+} 
+#newsletterRight{
+    display:flex;
+    justify-content:space-between;
+}
+.container { /* Add some padding and a grey background color to containers */
+  padding: 20px 0;
+}
+input[type=email], input[type=submit] { /* Style the input elements and the submit button */
+  width: 100%;
+  padding: 10px;
+  margin: 50px 0 10px 0; /* odredjuje poziciju dugmica unutar diva */
+  display: inline-block;
+  border: 1px solid #ccc; /*da ivice dugmica bude sivkaste umesto crne */
+  box-sizing: border-box; 
+}
+input[type=submit] { /* za dugme submit */
+  background-color: rgba(4,170,109,0.8);
+  color: white;
+  border: none;
+}
+input[type=submit]:hover { /*kad se hoveruje dugme submit */
+  opacity: 0.8;
+}
+input[type=checkbox] { /* za checkbox daily */
+  margin-top: 5px;   
+}
+footer{
+    background-color:rgba(71, 206, 255, 0.2);
+    margin:0 0 0 0;
+}
+#footer{
+    display:flex;
+    justify-content: space-between; 
+    padding:0 0 20px 0;
+} 
+#footer a{
+    color:rgba(0,0,0,1.00);
+    font-weight: 700;
+}
+ #map >iframe{
+    width:200px;
+    heigh:200px;
+}
+#footer p{
+	transition:400ms 0.5s transform ease;
+}
+#footer p:hover{
+	transform:scale(1.2);
+}
+	
+a.bttn_social{  /*OVO IMAJU DUGMICI SOCIAL*/
+	line-height:20px; 
+	padding:10px;
+	height:20px;
+	border:rgba(78,43,120,0.6) 3px solid;
+	border-radius:3px;/*zaobljuje ivice*/
+	transition:400ms 0.5s transform ease;
+}
+a.bttn_social:link,
+a.bttn_social:visited{
+	background:#FFF; /*boja kada nije kursor tu*/
+	color:rgba(0,0,0,0.8);
+    border:rgba(127,127,127,0.6) 1px solid;
+}
+a.bttn_social:hover{
+    background:rgba(17,128,44,0.1);
+	color:rgba(0,0,0,0.6);
+	transform:rotate(-20deg);
+    
+}
+a.bttn_social:active{
+	background:rgba(17,128,44,0.1);
+	color:rgba(0,0,0,0.6);
+}
+#socialicons1 a{
+    display:inline-block;/*da bi stajali jedno pored drugog jer bi ih block bacao ispod*/  
+}
+    
+   
+@media screen and (min-width: 1024px) and (max-width: 1280px){ /*malo manji ekran ili veci tablet*/
+
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+.allNewsPics{  
+    width:100%;
+    height:450px;
+}
+    .wrapper #mainThree p,
+.wrapper #mainFour p{
+      padding:0 20px;  
+}
+.popup-content {
+    width: 70%;
+}
+.popup-content .popUpImg{
+    background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+    width:100%;
+    height:470px;
+}    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){ /*manji tablet ili noviji telefoni*/
+.wrapper{
+	width: 700px; 
+}
+a.bttn_nav{ 
+	line-height:15px;
+	padding:15px;
+	height:15px;
+    width: 70px;
+	margin:10px 0px 0 0px;
+}
+#menu li ul li a.bttn_nav { 
+	margin:0px 0px 0 0px;
+}
+#text a{ 
+	line-height:5px;
+	padding:15px;
+	height:5px;
+    width:90px;	
+}
+.container_video{  /*za video dugme */
+    line-height:5px; 
+	height:36px;
+    width:115px;
+	margin:0 10px;
+}
+ .container_video .icon {
+	width: 10px;
+    margin: 0 10px 0 15px;
+}
+#preMain .wrapper .preMainParts a{
+	line-height:15px;
+	padding:15px;
+	height:15px;  
+}
+.wrapper #main{ 
+    padding: 10px 0 0 0;
+    display:block;
+}
+.wrapper #mainOne {
+        height: 400px;
+}
+.wrapper #mainTwo{
+    padding:15px 0;    
+} 
+#mainThree h5{
+    margin:10px 0;
+}
+#mainFour h5{
+    margin:10px 0;
+}
+#news .wrapper  #allNews .newsList h5{
+    padding:10px 10px;
+}
+.popup-content {
+    width: 70%;
+}
+.popup-content .popUpImg{
+    background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+    width:100%;
+    height:450px;
+}
+.allNewsPics{   
+    width:100%;
+    height:400px;
+}
+footer{
+    margin:0 0 0 0;
+}
+#footer{
+    display:flex;
+    justify-content: space-between; 
+    padding:0 0 20px 0;
+} 
+ #map >iframe{
+    width:150px;
+    heigh:150px;
+}
+#footer h2{
+     font-size:30px; 
+}
+#footer h3{
+     font-size:26px;   
+}
+#footer h5{
+     font-size:18px;   
+}
+#footer p{
+     font-size:14px;   
+}
+a.bttn_social{ 
+	line-height:15px; 
+	padding:8px;
+	height:15px;
+}
+}
+
+
+@media screen and (max-width: 767px){
+	
+
+.wrapper{ /* telefoni*/
+	width: 80%;
+    margin: 0 auto;
+}
+h1 {font-size:32px;}
+h2 {font-size:28px;}
+h3 {font-size:24px;}
+h4 {font-size:16px;}
+h5 {font-size:16px;}
+p  {font-size:14px;}
+
+#header{
+	background-size: cover;
+} 
+#logoAndNav{
+    display:flex;
+    flex-direction: column;
+} 
+#logoAndNav #logo{
+     text-align: center;   
+} 
+#logoAndNav #logo img{ 
+ width:80%;
+height:80%;
+}
+#logoAndNav #menu{
+    display: none;  /*da se id menu ne pokazuje*/ 
+}  
+a#resp-menu{ /*stilizacija resp menu linka*/
+    display: block;
+    color:rgba(255,255,255,1.00);
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+}
+#nav ul#menu.open {/*daje otvaranje liste sa idijem menu sa klasom open */
+    display: block;  
+}  
+#nav ul li ul{
+    position:relative;
+    top:0px;
+    left:100px;
+}    
+#hero #text{
+    width:100%;
+}
+#hero #text h1,
+#hero #text p{
+    text-align: center;
+}
+#hero #text p{
+    margin-bottom:20px;
+    }
+#text a{ /*pravimo dugme od linka */
+    width:80%;	
+}
+#text a{ /*pravimo dugme od linka */
+    font-weight:700;/*da bude boldovano*/
+	line-height:5px;
+	padding:20px;
+	height:5px;
+	margin:0 0px;/*razdvaja polja unutar navigacije */
+}
+ .container_video .icon {
+	width: 15px;
+	display: flex;
+    margin: 0 5px 0 15px;
+    text-align: center;
+}  
+.container_video{  /*za video dugme */
+    line-height:15px; 
+	height:45px;
+    width:100px;
+	margin:0 20px;/*razdvaja polja unutar navigacije */
+    }
+ .container_video .icon {
+	width: 10px;
+}            
+#preMain .wrapper .preMainAllParts{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:space-between; 
+    margin:5px 0;
+}
+#preMain .wrapper .preMainParts{
+    margin-bottom:5px;  
+    }
+#preMain .wrapper .preMainParts a{
+	line-height:5px;
+	padding:15px;
+	height:5px;
+}
+.wrapper #main{
+    display: flex;
+    flex-direction: column;  
+    padding-top:10px;
+}
+.wrapper #mainOne{
+    height:300px;
+}
+.wrapper #mainThree p,
+.wrapper #mainFour p{
+      padding:0 0;  
+} 
+#news .wrapper  #allNews{
+     display:flex;
+    flex-direction: column;
+}
+#news .wrapper #allNews .newsList{
+    margin-bottom:5px;  
+    }
+    .allNewsPics{
+    background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;   
+    width:100%;
+    height:350px;
+}
+.popup-content {
+    width: 70%;
+}
+.popup-content .popUpImg{
+    background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+    width:100%;
+    height:350px;
+}
+#newsletter{
+    display:flex;
+    flex-direction: column; 
+    padding-top:5px;
+} 
+#newsletterRight{
+    display:flex;
+    flex-direction: column;
+}
+    #email.container{
+        padding:0 0;
+    }
+input[type=email], input[type=submit] { /* Style the input elements and the submit button */
+  padding: 10px;
+  margin: 0px 0 10px 0;
+}
+#newsletterLeft.container{
+        maring-bottom:0;
+}
+#footer{
+    display:flex;
+   flex-direction: column;
+    padding:0 0 20px 0;
+}   
+a.bttn_social{
+	margin:15px 0 0 0;
+    padding:5px;
+}	
+#footer .footerParts p,
+#footer .footerParts #map{
+    text-align: center; 
+}   
+#footer .footerParts #map{  
+    padding-top: 20px;}
+#footer .footerParts #socialicons1{
+    text-align: center;
+}
+#footer .footerParts h2{
+     margin:0;  
+}
+#footer .footerParts h3{
+    margin-bottom:0;
+    }
+#footer .footerParts h5{
+    margin-bottom:10px;
+}
+}
